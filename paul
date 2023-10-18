@@ -1,0 +1,4 @@
+<picture>
+  <source srcset="paul.jpg" media="(min-width: 600px)" />
+  <img src="paul.jpg" alt="PAUL" />
+</picture>
