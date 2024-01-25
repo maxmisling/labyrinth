@@ -165,11 +165,9 @@ Enter your PTN: &lt;&lt;textbox &quot;$ptn&quot; &quot;3/10&quot;&gt;&gt;
 &lt;&lt;link `&quot;PROCEED TO: &quot; + $tag` &quot;......&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 
-</tw-passagedata><tw-passagedata pid="13" name="Untitled Passage" tags="" position="475,400" size="100,100"></tw-passagedata><tw-passagedata pid="14" name="SEEK HELP" tags="" position="425,800" size="100,100">Please ＡＣＱＵＩＲＥ More 𝕄𝕖𝕥𝕙𝕪𝕝 ℙ𝕙𝕖𝕟𝕚𝕕𝕒𝕥𝕖</tw-passagedata><tw-passagedata pid="15" name="FIND PARTS" tags="" position="550,800" size="100,100">&lt;&lt;set $level = &quot;7&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="13" name="Untitled Passage" tags="" position="475,400" size="100,100"></tw-passagedata><tw-passagedata pid="14" name="SEEK HELP" tags="" position="425,800" size="100,100">Please ＡＣＱＵＩＲＥ More 𝕄𝕖𝕥𝕙𝕪𝕝 ℙ𝕙𝕖𝕟𝕚𝕕𝕒𝕥𝕖</tw-passagedata><tw-passagedata pid="15" name="FIND PARTS" tags="" position="550,800" size="100,100">/*&lt;&lt;set $level = &quot;5&quot;&gt;&gt;*/
 
-&lt;&lt;if $level is &quot;7&quot;&gt;&gt;&lt;&lt;set $parts = $parts7&gt;&gt;&lt;&lt;print &quot;TAG ASSIGNED: &quot; + either($tag7)&gt;&gt;&lt;&lt;/if&gt;&gt;
-
-&lt;&lt;set $parts5 = [&quot;DROWN&quot; &quot;IN&quot; &quot;THE&quot; &quot;MIRE&quot;]&gt;&gt;
+&lt;&lt;set $parts5 = [&quot;DROWN&quot;, &quot;IN&quot;, &quot;THE&quot;, &quot;MIRE&quot;]&gt;&gt;
 
 &lt;&lt;set $parts6 = [&quot;DELTA&quot;, &quot;STELLA&quot;, &quot;FIGHT&quot;]&gt;&gt;
 
@@ -179,9 +177,15 @@ Enter your PTN: &lt;&lt;textbox &quot;$ptn&quot; &quot;3/10&quot;&gt;&gt;
 
 &lt;&lt;set $parts9 = [&quot;HAZE&quot;, &quot;BURN&quot;, &quot;EFFIGY&quot;, &quot;REPENT&quot;]&gt;&gt;
 
-&lt;&lt;set partsother = [&quot;CRUEL&quot;, &quot;PRAY&quot;, &quot;THE&quot;, &quot;CHURCH&quot;, &quot;ARTISTE&quot;, &quot;FLEE!&quot;, &quot;FALTER&quot;, &quot;FOUR&quot;, &quot;GEHENN&quot;, &quot;HENNA&quot;, &quot;ALARM&quot;, &quot;POP&quot;, &quot;GOLB&quot;, &quot;BLOG&quot;, &quot;PEASANT&quot;, &quot;STACK, &quot;ATTACK&quot;, &quot;EYES&quot;, &quot;&quot;PAIN&quot;, &quot;READY&quot;, &quot;LOSE&quot;]&gt;&gt;
+&lt;&lt;set $partsother = [&quot;CRUEL&quot;, &quot;PRAY&quot;, &quot;THE&quot;, &quot;CHURCH&quot;, &quot;ARTISTE&quot;, &quot;FLEE!&quot;, &quot;FALTER&quot;, &quot;FOUR&quot;, &quot;GEHENN&quot;, &quot;HENNA&quot;, &quot;ALARM&quot;, &quot;POP&quot;, &quot;GOLB&quot;, &quot;BLOG&quot;, &quot;PEASANT&quot;, &quot;STACK&quot;, &quot;ATTACK&quot;, &quot;EYES&quot;, &quot;PAIN&quot;, &quot;READY&quot;, &quot;LOSE&quot;]&gt;&gt;
 
-&lt;&lt;if $level is &quot;7&quot;&gt;&gt;&lt;&lt;print &quot;SUGGESTION: &quot; + either($parts7)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $level is &quot;9&quot;&gt;&gt;&lt;&lt;print &quot;SUGGESTION: &quot; + either($parts9) + &quot; FOR THE &quot; + either($partsother)&gt;&gt;
+&lt;&lt;elseif $level is &quot;8&quot;&gt;&gt;&lt;&lt;print &quot;SUGGESTION: &quot; + either($parts8) + &quot; IN THE &quot; + either($partsother)&gt;&gt;
+&lt;&lt;elseif $level is &quot;7&quot;&gt;&gt;&lt;&lt;print &quot;SUGGESTION: &quot; + either($parts7) + &quot; THROUGH THE &quot; + either($partsother)&gt;&gt;
+&lt;&lt;elseif $level is &quot;6&quot;&gt;&gt;&lt;&lt;print &quot;SUGGESTION: &quot; + either($parts6) + &quot; AND &quot; + either($partsother)&gt;&gt;
+&lt;&lt;elseif $level is &quot;5&quot;&gt;&gt;&lt;&lt;print &quot;SUGGESTION: DROWN IN THE MIRE &quot;&gt;&gt;
+&lt;&lt;else&gt;&gt;&lt;&lt;print &quot;SUGGESTION: &quot; + either($partsother) + &quot; THE &quot; + either($partsother)&gt;&gt; 
+&lt;&lt;/if&gt;&gt;
 
 [[SEEK HELP]] 
 
