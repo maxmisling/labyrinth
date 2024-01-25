@@ -104,7 +104,13 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 [[DELTA]]</tw-passagedata><tw-passagedata pid="4" name="DELTA" tags="" position="300,225" size="100,100"></tw-passagedata><tw-passagedata pid="5" name="CRUEL" tags="" position="425,225" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="Start" tags="" position="300,75" size="100,100">You are 𝕃𝕠𝕤𝕥 in the 𝒲𝑒𝒷.
 
 
-[[.]]</tw-passagedata><tw-passagedata pid="7" name="......" tags="" position="425,675" size="100,100">&lt;&lt;print &quot;The &quot;+ $tag + &quot; has turned on you! The &quot; + $tag + &quot; has got out of hand!&quot;&gt;&gt;
+[[.]]</tw-passagedata><tw-passagedata pid="7" name="......" tags="" position="425,675" size="100,100">&lt;&lt;if $level is &quot;5&quot;&gt;&gt;&lt;&lt;set $hav = &quot;have&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $level is &quot;6&quot;&gt;&gt;&lt;&lt;set $hav = &quot;has&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $level is &quot;7&quot;&gt;&gt;&lt;&lt;set $hav = &quot;have&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $level is &quot;8&quot;&gt;&gt;&lt;&lt;set $hav = &quot;has&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $level is &quot;9&quot;&gt;&gt;&lt;&lt;set $hav = &quot;has&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;print &quot;The &quot;+ $tag + &quot; &quot; + $hav + &quot; turned on you! The &quot; + $tag + &quot; &quot; + $hav + &quot; got out of hand!&quot;&gt;&gt;
 
 [[SEEK HELP]]
 
@@ -145,11 +151,11 @@ Enter your PTN: &lt;&lt;textbox &quot;$ptn&quot; &quot;3/10&quot;&gt;&gt;
 &lt;&lt;set $tags8 = [&quot;RESAMPLE&quot;]&gt;&gt;
 &lt;&lt;set $tags9 = [&quot;COLONIAL MELODY&quot;]&gt;&gt;
 &lt;&lt;set $tag7 = either($tags7)&gt;&gt;
-/*&lt;&lt;set $level = &quot;6&quot;&gt;&gt;*/
+/*&lt;&lt;set $level = &quot;8&quot;&gt;&gt;*/
 &lt;&lt;if $level is &quot;7&quot;&gt;&gt;&lt;&lt;set $tag = $tag7&gt;&gt;&lt;&lt;print &quot;TAG ASSIGNED: &quot; + either($tag7)&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $level is &quot;6&quot;&gt;&gt;&lt;&lt;set $tag = $tags6&gt;&gt;&lt;&lt;print &quot;TAG ASSIGNED: &quot; + either($tags6)&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $level is &quot;5&quot;&gt;&gt;&lt;&lt;set $tag = $tag5&gt;&gt;&lt;&lt;print &quot;TAG ASSIGNED: &quot; + either($tags5)&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $level is &quot;8&quot;&gt;&gt;&lt;&lt;set $tag = $tagss8&gt;&gt;&lt;&lt;print &quot;TAG ASSIGNED: &quot; + either($tags8)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $level is &quot;5&quot;&gt;&gt;&lt;&lt;set $tag = $tags5&gt;&gt;&lt;&lt;print &quot;TAG ASSIGNED: &quot; + either($tags5)&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $level is &quot;8&quot;&gt;&gt;&lt;&lt;set $tag = $tags8&gt;&gt;&lt;&lt;print &quot;TAG ASSIGNED: &quot; + either($tags8)&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $level is &quot;9&quot;&gt;&gt;&lt;&lt;set $tag = $tags9&gt;&gt;&lt;&lt;print &quot;TAG ASSIGNED: &quot; + either($tags9)&gt;&gt;&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;link `&quot;PROCEED TO: &quot; + $tag` &quot;......&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
