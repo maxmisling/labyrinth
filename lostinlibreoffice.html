@@ -104,11 +104,13 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 [[DELTA]]</tw-passagedata><tw-passagedata pid="4" name="DELTA" tags="" position="300,225" size="100,100"></tw-passagedata><tw-passagedata pid="5" name="CRUEL" tags="" position="425,225" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="Start" tags="" position="300,75" size="100,100">You are 𝕃𝕠𝕤𝕥 in the 𝒲𝑒𝒷.
 
 
-[[.]]</tw-passagedata><tw-passagedata pid="7" name="......" tags="" position="425,675" size="100,100">&lt;&lt;if $level is &quot;5&quot;&gt;&gt;&lt;&lt;set $hav = &quot;have&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $level is &quot;6&quot;&gt;&gt;&lt;&lt;set $hav = &quot;has&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $level is &quot;7&quot;&gt;&gt;&lt;&lt;set $hav = &quot;have&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $level is &quot;8&quot;&gt;&gt;&lt;&lt;set $hav = &quot;has&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $level is &quot;9&quot;&gt;&gt;&lt;&lt;set $hav = &quot;has&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
+[[.]]</tw-passagedata><tw-passagedata pid="7" name="......" tags="" position="425,675" size="100,100">&lt;&lt;if $level is &quot;5&quot;&gt;&gt;&lt;&lt;set $hav = &quot;have&quot;&gt;&gt;
+&lt;&lt;elseif $level is &quot;6&quot;&gt;&gt;&lt;&lt;set $hav = &quot;has&quot;&gt;&gt;
+&lt;&lt;elseif $level is &quot;7&quot;&gt;&gt;&lt;&lt;set $hav = &quot;have&quot;&gt;&gt;
+&lt;&lt;elseif $level is &quot;8&quot;&gt;&gt;&lt;&lt;set $hav = &quot;has&quot;&gt;&gt;
+&lt;&lt;elseif $level is &quot;9&quot;&gt;&gt;&lt;&lt;set $hav = &quot;has&quot;&gt;&gt;
+&lt;&lt;else&gt;&gt;&lt;&lt;set $hav = &quot;has&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;print &quot;The &quot;+ $tag + &quot; &quot; + $hav + &quot; turned on you! The &quot; + $tag + &quot; &quot; + $hav + &quot; got out of hand!&quot;&gt;&gt;
 
@@ -132,7 +134,7 @@ Enter your PTN: &lt;&lt;textbox &quot;$ptn&quot; &quot;3/10&quot;&gt;&gt;
 
 /*&lt;&lt;set $name to &quot;Shy&quot;&gt;&gt;*/
 
-[[....]]</tw-passagedata><tw-passagedata pid="11" name="...." tags="" position="300,425" size="100,100">&lt;&lt;if $name is &quot;Shy&quot;&gt;&gt;&lt;&lt;[[Hello Shy|.....]]&gt;&gt;
+[[....]]</tw-passagedata><tw-passagedata pid="11" name="...." tags="" position="300,425" size="100,100">&lt;&lt;if $name is &quot;Shy&quot;&gt;&gt;&lt;&lt;link `&quot;HELLO &quot; + $name` &quot;.....&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;&lt;print &quot;we are looking for //Shy// please&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 
 
@@ -159,22 +161,17 @@ Enter your PTN: &lt;&lt;textbox &quot;$ptn&quot; &quot;3/10&quot;&gt;&gt;
 &lt;&lt;elseif $level is &quot;6&quot;&gt;&gt;&lt;&lt;set $tag = $tags6&gt;&gt;&lt;&lt;print &quot;TAG ASSIGNED: &quot; + either($tags6)&gt;&gt;
 &lt;&lt;elseif $level is &quot;5&quot;&gt;&gt;&lt;&lt;set $tag = $tags5&gt;&gt;&lt;&lt;print &quot;TAG ASSIGNED: &quot; + either($tags5)&gt;&gt;
 &lt;&lt;elseif $level is &quot;8&quot;&gt;&gt;&lt;&lt;set $tag = $tags8&gt;&gt;&lt;&lt;print &quot;TAG ASSIGNED: &quot; + either($tags8)&gt;&gt;
-&lt;&lt;elseif $level is &quot;9&quot;&gt;&gt;&lt;&lt;set $tag = $tags9&gt;&gt;&lt;&lt;print &quot;TAG ASSIGNED: &quot; + either($tags9)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $tag = $tagother&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;elseif $level is &quot;9&quot;&gt;&gt;&lt;&lt;set $tag = $tags9&gt;&gt;&lt;&lt;print &quot;TAG ASSIGNED: &quot; + either($tags9)&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $tag = $tagother&gt;&gt;&lt;&lt;print &quot;TAG ASSIGNED: &quot; + either($tagother)&gt;&gt;&lt;&lt;/if&gt;&gt;
 
 
 &lt;&lt;link `&quot;PROCEED TO: &quot; + $tag` &quot;......&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 
 </tw-passagedata><tw-passagedata pid="13" name="Untitled Passage" tags="" position="475,400" size="100,100"></tw-passagedata><tw-passagedata pid="14" name="SEEK HELP" tags="" position="425,800" size="100,100">Please ＡＣＱＵＩＲＥ More 𝕄𝕖𝕥𝕙𝕪𝕝 ℙ𝕙𝕖𝕟𝕚𝕕𝕒𝕥𝕖</tw-passagedata><tw-passagedata pid="15" name="FIND PARTS" tags="" position="550,800" size="100,100">/*&lt;&lt;set $level = &quot;5&quot;&gt;&gt;*/
-
 &lt;&lt;set $parts5 = [&quot;DROWN&quot;, &quot;IN&quot;, &quot;THE&quot;, &quot;MIRE&quot;]&gt;&gt;
-
 &lt;&lt;set $parts6 = [&quot;DELTA&quot;, &quot;STELLA&quot;, &quot;FIGHT&quot;]&gt;&gt;
-
 &lt;&lt;set $parts7 = [&quot;ALEPH&quot;, &quot;BRITISH&quot;, &quot;OMNICRON&quot;, &quot;TWO&quot;, &quot;LITANY&quot;]&gt;&gt;
-
 &lt;&lt;set $parts8 = [&quot;RECOOD&quot;, &quot;DESCEND&quot;, &quot;DEBATE&quot;, &quot;DEN&quot;]&gt;&gt;
-
 &lt;&lt;set $parts9 = [&quot;HAZE&quot;, &quot;BURN&quot;, &quot;EFFIGY&quot;, &quot;REPENT&quot;]&gt;&gt;
 
 &lt;&lt;set $partsother = [&quot;CRUEL&quot;, &quot;PRAY&quot;, &quot;THE&quot;, &quot;CHURCH&quot;, &quot;ARTISTE&quot;, &quot;FLEE!&quot;, &quot;FALTER&quot;, &quot;FOUR&quot;, &quot;GEHENN&quot;, &quot;HENNA&quot;, &quot;ALARM&quot;, &quot;POP&quot;, &quot;GOLB&quot;, &quot;BLOG&quot;, &quot;PEASANT&quot;, &quot;STACK&quot;, &quot;ATTACK&quot;, &quot;EYES&quot;, &quot;PAIN&quot;, &quot;READY&quot;, &quot;LOSE&quot;]&gt;&gt;
