@@ -134,7 +134,7 @@ Enter your PTN: &lt;&lt;textbox &quot;$ptn&quot; &quot;3/10&quot;&gt;&gt;
 
 /*&lt;&lt;set $name to &quot;Shy&quot;&gt;&gt;*/
 
-[[....]]</tw-passagedata><tw-passagedata pid="11" name="...." tags="" position="300,425" size="100,100">&lt;&lt;if $name is &quot;Shy&quot;&gt;&gt;&lt;&lt;link `&quot;HELLO &quot; + $name` &quot;.....&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+[[....]]</tw-passagedata><tw-passagedata pid="11" name="...." tags="" position="300,425" size="100,100">&lt;&lt;if $name is &quot;Shy&quot;&gt;&gt;&lt;&lt;link `&quot;PLEASE CONTINUE FOR SOUND ASSIGNMENT&quot;` &quot;.....&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;&lt;print &quot;we are looking for //Shy// please&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 
 
@@ -167,7 +167,9 @@ Enter your PTN: &lt;&lt;textbox &quot;$ptn&quot; &quot;3/10&quot;&gt;&gt;
 &lt;&lt;link `&quot;PROCEED TO: &quot; + $tag` &quot;......&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 
-</tw-passagedata><tw-passagedata pid="13" name="Untitled Passage" tags="" position="475,400" size="100,100"></tw-passagedata><tw-passagedata pid="14" name="SEEK HELP" tags="" position="425,800" size="100,100">Please ＡＣＱＵＩＲＥ More 𝕄𝕖𝕥𝕙𝕪𝕝 ℙ𝕙𝕖𝕟𝕚𝕕𝕒𝕥𝕖</tw-passagedata><tw-passagedata pid="15" name="FIND PARTS" tags="" position="550,800" size="100,100">/*&lt;&lt;set $level = &quot;5&quot;&gt;&gt;*/
+</tw-passagedata><tw-passagedata pid="13" name="Untitled Passage" tags="" position="475,400" size="100,100"></tw-passagedata><tw-passagedata pid="14" name="SEEK HELP" tags="" position="425,800" size="100,100">Please ＡＣＱＵＩＲＥ More 𝕄𝕖𝕥𝕙𝕪𝕝 ℙ𝕙𝕖𝕟𝕚𝕕𝕒𝕥𝕖</tw-passagedata><tw-passagedata pid="15" name="FIND PARTS" tags="" position="550,800" size="100,100">/*&lt;&lt;set $level = &quot;a&quot;&gt;&gt;*/
+/*&lt;&lt;set $bpm = &quot;130&quot;&gt;&gt;*/
+&lt;&lt;if $bpm &gt;= 120&gt;&gt;&lt;&lt;print &quot;SLOW DOWN&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;set $parts5 = [&quot;DROWN&quot;, &quot;IN&quot;, &quot;THE&quot;, &quot;MIRE&quot;]&gt;&gt;
 &lt;&lt;set $parts6 = [&quot;DELTA&quot;, &quot;STELLA&quot;, &quot;FIGHT&quot;]&gt;&gt;
 &lt;&lt;set $parts7 = [&quot;ALEPH&quot;, &quot;BRITISH&quot;, &quot;OMNICRON&quot;, &quot;TWO&quot;, &quot;LITANY&quot;]&gt;&gt;
