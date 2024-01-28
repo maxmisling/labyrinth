@@ -98,7 +98,38 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Labyrinth" startnode="1" creator="Twine" creator-version="2.8.1" format="SugarCube" format-version="2.36.1" ifid="DEB2BF00-3D91-4F03-9FA4-6F1C66E06578" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="start" tags="" position="600,225" size="100,100">𝖄𝖔𝖚 𝖍𝖆𝖛𝖊 𝖊𝖓𝖙𝖊𝖗𝖊𝖉 𝖙𝖍𝖊 𝖑𝖆𝖇𝖞𝖗𝖎𝖓𝖙𝖍 𝖔𝖋 the dream𝔴𝔬𝔯𝔪
+	<tw-storydata name="Labyrinth" startnode="1" creator="Twine" creator-version="2.8.1" format="SugarCube" format-version="2.36.1" ifid="DEB2BF00-3D91-4F03-9FA4-6F1C66E06578" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">html {
+  font-family: Gill Sans;
+}
+
+/*a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}*/
+
+.link a {
+    color: green;
+}
+
+
+a {
+	color: white !important;
+}
+a:hover, a:focus {
+	filter: brightness(1.4);
+}
+
+
+body {
+  background-image: url('https://realmoftheworm.space/stone2.png');
+}
+
+
+body.outside {
+	background-image: url('http://realmoftheworm.space/black.png');
+  	background-size: cover;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="start" tags="" position="600,225" size="100,100">𝖄𝖔𝖚 𝖍𝖆𝖛𝖊 𝖊𝖓𝖙𝖊𝖗𝖊𝖉 𝖙𝖍𝖊 𝖑𝖆𝖇𝖞𝖗𝖎𝖓𝖙𝖍 𝖔𝖋 the dream𝔴𝔬𝔯𝔪
 
 [[Take the Left Path|path1]]
 [[Take the Right Path|path2]]
@@ -129,13 +160,14 @@ Rolling a 2d6 + 10: &lt;&lt;print random(1, 6) + random(1, 6) + 10 &gt;&gt;</tw-
 [[Right|path6]]</tw-passagedata><tw-passagedata pid="8" name="path4" tags="" position="475,475" size="100,100">[[Left|path10]]
 &lt;&lt;set $counter = either(0,1,2)&gt;&gt;&lt;&lt;if $counter == 1&gt;&gt;&lt;&lt;link `&quot;Straight Ahead&quot;` &quot;Sleep&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;[[Straight Ahead|path1]]&lt;&lt;/if&gt;&gt;
 [[Right|path1]]
-</tw-passagedata><tw-passagedata pid="9" name="path5" tags="" position="600,600" size="100,100">A thread!
-
+</tw-passagedata><tw-passagedata pid="9" name="path5" tags="" position="600,600" size="100,100">A thread!   &lt;img src=&quot;http://realmoftheworm.space/thread.png&quot; style=&quot;width: 1.75%;max-height: 1.75%&quot; /&gt;
 [[Left|path1]]
 [[Right|path2]]
 
 &lt;&lt;if $enter is true&gt;&gt;&lt;&lt;set $thread to true&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;set $thread to true&gt;&gt;
+
+/*alt=&quot;logo&quot; style=&quot;bottom: 0; right: 0; position: fixed&quot;*/
 
 
 </tw-passagedata><tw-passagedata pid="10" name="path7" tags="" position="850,475" size="100,100">Are you Lost?
@@ -154,14 +186,14 @@ Rolling a 2d6 + 10: &lt;&lt;print random(1, 6) + random(1, 6) + 10 &gt;&gt;</tw-
 
 &lt;&lt;if $exit is true&gt;&gt;&lt;&lt;print &quot;This pleases the worm!&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $exit is true&gt;&gt;[[He has invited you to enter his body!|exit]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="exit" tags="" position="725,850" size="100,100">You have entered the dream𝔴𝔬𝔯𝔪!!! You have become one with 𝔥𝔦𝔪!
+&lt;&lt;if $exit is true&gt;&gt;[[He has invited you to enter his body!|exit]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="exit" tags="outside" position="725,850" size="100,100">You have entered the dream𝔴𝔬𝔯𝔪!!! You have become one with 𝔥𝔦𝔪!
 You understand everything!! There is no pain or sorrow or confusion!!
 You have joined a state of transcendant bliss!&lt;&lt;audio wurmsong play&gt;&gt;
 
 There is only the&lt;strong&gt;&lt;h2&gt;!! 𝔚𝔒ℜ𝔐  !!!&lt;/h2&gt;&lt;/strong&gt;
 &lt;h3&gt;&lt;&lt;print &quot;~~~ ~~~&quot;&gt;&gt;&lt;&lt;print &quot;~~~ ~~~&quot;&gt;&gt;&lt;&lt;print &quot;~~~&quot;&gt;&gt;*-.,_,.-*. &lt;&lt;print &quot;~~~ ~~~&quot;&gt;&gt;&lt;&lt;print &quot;~~~ ~~~&quot;&gt;&gt;&lt;&lt;print &quot;~~~ ~~~&quot;&gt;&gt;&lt;&lt;print &quot;~~~ ~~~&quot;&gt;&gt; &lt;/h3&gt;
 
-&lt;&lt;timed 50s&gt;&gt;&lt;&lt;goto &quot;Earth&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Earth" tags="" position="900,700" size="100,100">&lt;em&gt; you have been evicted from the fabric of the 𝔴𝔬𝔯𝔪&lt;/em&gt;
+&lt;&lt;timed 50s&gt;&gt;&lt;&lt;goto &quot;Earth&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Earth" tags="outside" position="900,700" size="100,100">&lt;em&gt; you have been evicted from the fabric of the 𝔴𝔬𝔯𝔪&lt;/em&gt;
 &lt;em&gt; you have been evicted from the fabric of the 𝔴𝔬𝔯𝔪&lt;/em&gt;
 &lt;em&gt; you have been evicted from the fabric of the 𝔴𝔬𝔯𝔪&lt;/em&gt;
 
@@ -169,7 +201,10 @@ There is only the&lt;strong&gt;&lt;h2&gt;!! 𝔚𝔒ℜ𝔐  !!!&lt;/h2&gt;&lt;/
 
 
 
-the dream𝔴𝔬𝔯𝔪 has returned you to Earth3C 51.46551, -2.56684!</tw-passagedata><tw-passagedata pid="15" name="path9" tags="" position="850,850" size="100,100">&lt;&lt;choice path1 &quot;Search for a Gift for the 𝔚𝔬𝔯𝔪?&quot;&gt;&gt;
+the dream𝔴𝔬𝔯𝔪 has returned you to Earth3C 51.46551, -2.56684!
+
+
+</tw-passagedata><tw-passagedata pid="15" name="path9" tags="" position="850,850" size="100,100">&lt;&lt;choice path1 &quot;Search for a Gift for the 𝔚𝔬𝔯𝔪?&quot;&gt;&gt;
 
 &lt;&lt;if $gift is true&gt;&gt;[[Search for a Gift for the 𝔚𝔬𝔯𝔪?!|path10]]&lt;&lt;/if&gt;&gt;
 
@@ -180,7 +215,7 @@ the dream𝔴𝔬𝔯𝔪 has returned you to Earth3C 51.46551, -2.56684!</tw-pa
 [[Right|path11]]</tw-passagedata><tw-passagedata pid="17" name="path11" tags="" position="475,725" size="100,100">[[Left|path5]]
 &lt;&lt;set $counter = either(0,1,2,3)&gt;&gt;&lt;&lt;if $counter == 1&gt;&gt;&lt;&lt;link `&quot;Straight Ahead&quot;` &quot;GUTSymmetries&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;[[Straight Ahead|path10]]&lt;&lt;/if&gt;&gt;
 [[Right|path5]]
-</tw-passagedata><tw-passagedata pid="18" name="thecatsdream" tags="" position="575,925" size="100,100">&lt;a href=&quot;https://realmoftheworm.space/thecatsdream&quot;&gt;&lt;&lt;button &quot;Once I lay under under the hill and there I dreamt.&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/a&gt;</tw-passagedata><tw-passagedata pid="19" name="Sleep" tags="" position="350,375" size="100,100">You are so tired from searching.
+</tw-passagedata><tw-passagedata pid="18" name="thecatsdream" tags="outside" position="575,925" size="100,100">&lt;a href=&quot;https://realmoftheworm.space/thecatsdream&quot;&gt;&lt;&lt;button &quot;Once I lay under under the hill and there I dreamt.&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/a&gt;</tw-passagedata><tw-passagedata pid="19" name="Sleep" tags="" position="350,375" size="100,100">You are so tired from searching.
 
 [[Lie down and rest a while?|thecatsdream]]
 
