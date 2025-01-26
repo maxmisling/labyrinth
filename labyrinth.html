@@ -153,8 +153,11 @@ Rolling a 1d100: &lt;&lt;print random(1, 100) &gt;&gt;
 Rolling a 1d4 + 4: &lt;&lt;print random(1, 4) + 4 &gt;&gt;
 Rolling a 1d6 - 2: &lt;&lt;print random(1, 6) - 2 &gt;&gt;
 Rolling a 2d6 + 10: &lt;&lt;print random(1, 6) + random(1, 6) + 10 &gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="path2" tags="" position="725,350" size="100,100">[[Left|path6]]
-&lt;&lt;set $counter = either(0,1,2)&gt;&gt;&lt;&lt;if $counter == 1&gt;&gt;&lt;&lt;link `&quot;Straight Ahead&quot;` &quot;Sleep&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;[[Straight Ahead|path7]]&lt;&lt;/if&gt;&gt;
-[[Right|path8]]</tw-passagedata><tw-passagedata pid="5" name="Untitled Passage" tags="" position="475,350" size="100,100">&lt;&lt;set $counter = either(0,1)&gt;&gt;
+&lt;&lt;set $counter = either(0,1,2)&gt;&gt;
+&lt;&lt;if $counter == 1&gt;&gt;&lt;&lt;link `&quot;Straight Ahead&quot;` &quot;Sleep&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $counter == 2&gt;&gt;&lt;&lt;link `&quot;Straight Ahead&quot;` &quot;choice1&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $counter == 0&gt;&gt;[[Straight Ahead|path7]]&lt;&lt;/if&gt;&gt;
+[[Right|path8]]</tw-passagedata><tw-passagedata pid="5" name="choice1" tags="" position="475,350" size="100,100">&lt;&lt;set $counter = either(0,1)&gt;&gt;
 &lt;&lt;if $counter == 0&gt;&gt;
 &lt;&lt;choice start &quot;Return to Start&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
@@ -172,14 +175,11 @@ Rolling a 2d6 + 10: &lt;&lt;print random(1, 6) + random(1, 6) + 10 &gt;&gt;</tw-
 [[Left|path3]]
 [[Straight Ahead|path2]]
 [[Right|path6]]
-
 &lt;&lt;/if&gt;&gt;
-
 &lt;&lt;if $counter == 1&gt;&gt;
 [[Left|prawn]]
 [[Straight Ahead|paul]]
 [[Right|path6]]
-
 &lt;&lt;/if&gt;&gt;
 
 </tw-passagedata><tw-passagedata pid="8" name="path4" tags="" position="475,475" size="100,100">[[Left|path10]]
@@ -197,10 +197,11 @@ Rolling a 2d6 + 10: &lt;&lt;print random(1, 6) + random(1, 6) + 10 &gt;&gt;</tw-
 
 </tw-passagedata><tw-passagedata pid="10" name="path7" tags="" position="850,475" size="100,100">Are you Lost?
 &lt;&lt;choice start &quot;Return to Start?&quot;&gt;&gt;
-
 [[Left|path2]]
-[[Straight Ahead|path8]]
-</tw-passagedata><tw-passagedata pid="11" name="path8" tags="" position="725,600" size="100,100">[[What&#39;s that Sound...|sound]]&lt;&lt;cacheaudio &quot;wurmsong&quot; &quot;https://realmoftheworm.space/wurmsong.mp3&quot;&gt;&gt;&lt;&lt;cacheaudio &quot;wurmsongshort&quot; &quot;https://realmoftheworm.space/wurmsongveryshort.mp3&quot;&gt;&gt;
+&lt;&lt;set $counter = either(0,1,2)&gt;&gt;
+&lt;&lt;if $counter == 1&gt;&gt;&lt;&lt;link `&quot;Straight Ahead&quot;` &quot;Sleep&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $counter == 2&gt;&gt;&lt;&lt;link `&quot;Straight Ahead&quot;` &quot;choice1&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $counter == 0&gt;&gt;[[Straight Ahead|path8]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="path8" tags="" position="725,600" size="100,100">[[What&#39;s that Sound...|sound]]&lt;&lt;cacheaudio &quot;wurmsong&quot; &quot;https://realmoftheworm.space/wurmsong.mp3&quot;&gt;&gt;&lt;&lt;cacheaudio &quot;wurmsongshort&quot; &quot;https://realmoftheworm.space/wurmsongveryshort.mp3&quot;&gt;&gt;
 
 </tw-passagedata><tw-passagedata pid="12" name="sound" tags="" position="725,725" size="100,100">The dream𝔴𝔬𝔯𝔪 is singing to you!
 
