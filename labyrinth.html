@@ -166,10 +166,9 @@ Rolling a 2d6 + 10: &lt;&lt;print random(1, 6) + random(1, 6) + 10 &gt;&gt;</tw-
 &lt;&lt;/if&gt;&gt;
 </tw-passagedata><tw-passagedata pid="6" name="path3" tags="" position="600,475" size="100,100">[[Left|path2]]
 &lt;&lt;set $counter = either(0,1,2)&gt;&gt;
-&lt;&lt;if $counter == 1&gt;&gt;&lt;&lt;link `&quot;Straight Ahead&quot;` &quot;Sleep&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;if $counter == 2&gt;&gt;&lt;&lt;link `&quot;Straight Ahead&quot;` &quot;agent&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;else&gt;&gt;[[Straight Ahead|path1]]
-&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $counter == 1&gt;&gt;&lt;&lt;link `&quot;Straight Ahead&quot;` &quot;Sleep&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $counter == 2&gt;&gt;&lt;&lt;link `&quot;Straight Ahead&quot;` &quot;agent&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $counter == 0&gt;&gt;[[Straight Ahead|path1]]&lt;&lt;/if&gt;&gt;
 
 </tw-passagedata><tw-passagedata pid="7" name="path6" tags="" position="725,475" size="100,100">&lt;&lt;set $counter = either(0,1,2)&gt;&gt;
 &lt;&lt;if $counter == 0&gt;&gt;
